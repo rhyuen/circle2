@@ -2,9 +2,10 @@
   "name": "circle2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
