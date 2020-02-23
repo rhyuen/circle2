@@ -1,5 +1,6 @@
 const request = require('supertest');
 const app = require("./app.js")
+const axios = require("axios");
 let server;
 
 beforeAll((done) => {
@@ -18,6 +19,15 @@ describe('GET /', () => {
             }, done)
     });
 });
+
+describe('GET /', () => {
+    it('with axios', async (done) => {
+        const result = await axios.get("http://localhost:3000/");
+        expect(result.data.message).toEqual("lack of documentation.");
+        done();
+    });
+});
+
 
 describe("POST /", () => {
     it("respond with 201", async (done) => {
